@@ -95,7 +95,7 @@ obj2.fullName='GUujjfb nvhbkjfkj'
 obj2.fullName;
 
 
-//Task 9
+//Task 9,10
 class Account{
      #balance=0;
 
