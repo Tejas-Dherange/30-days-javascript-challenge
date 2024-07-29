@@ -1,3 +1,5 @@
+
+//Hello friends
 //Task 1
 let fact=1;
 function factorial(n){
