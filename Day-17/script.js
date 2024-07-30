@@ -1,148 +1,148 @@
 // Task 1,2 ==> LinkedList
-// class Node{
-//     constructor(val){
-//         this.val=val;
-//         this.next=null;
-//     }
+class Node{
+    constructor(val){
+        this.val=val;
+        this.next=null;
+    }
 
-// }
-// {class singly{
-//     constructor(){
-//         this.head=null;
-//     }
+}
+{class singly{
+    constructor(){
+        this.head=null;
+    }
 
-//     push(val){
-//         const newNode=new Node(val);
-//         if(this.head==null){
-//             this.head=newNode;
-//             return;
-//         }
-//         let currNode=this.head;
-//         while(currNode.next!=null){
-//             currNode=currNode.next;
-//         }
-//         currNode.next=newNode;
-//     }
+    push(val){
+        const newNode=new Node(val);
+        if(this.head==null){
+            this.head=newNode;
+            return;
+        }
+        let currNode=this.head;
+        while(currNode.next!=null){
+            currNode=currNode.next;
+        }
+        currNode.next=newNode;
+    }
 
-//     pop(){
+    pop(){
 
-//         if(this.head==null){
-//             console.log("List is empty");
-//             return;
-//         }
-//         let currNode=this.head;
-//         let prev;
-//         while(currNode.next!=null){
-//             prev =currNode;
-//             currNode=currNode.next;
-//         }
-//         prev.next=null;
-//     }
-//     display(){
-//         console.log("This is list :");
-//         if(this.head==null){
-//            console.log("List is empty");
-//            return;
-//         }
-//         let currNode=this.head;
-//         while(currNode!=null){
-//             console.log(currNode.val);
-//             currNode=currNode.next;
-//         }
-//     }
-// }
+        if(this.head==null){
+            console.log("List is empty");
+            return;
+        }
+        let currNode=this.head;
+        let prev;
+        while(currNode.next!=null){
+            prev =currNode;
+            currNode=currNode.next;
+        }
+        prev.next=null;
+    }
+    display(){
+        console.log("This is list :");
+        if(this.head==null){
+           console.log("List is empty");
+           return;
+        }
+        let currNode=this.head;
+        while(currNode!=null){
+            console.log(currNode.val);
+            currNode=currNode.next;
+        }
+    }
+}
 
-// const list=new singly();
-// list.push(10);
-// list.push(20);
-// list.push(30);
-// list.push(40);
-// list.display();
-// list.pop();
-// list.display();}
+const list=new singly();
+list.push(10);
+list.push(20);
+list.push(30);
+list.push(40);
+list.display();
+list.pop();
+list.display();}
 
 // Task 3,4 ==> STACK
 
-//Task 3
-// {class Node{
-//     constructor(data){
-//         this.data=data;
-//         this.next=null;
-//     }
-// }
+// Task 3
+{class Node{
+    constructor(data){
+        this.data=data;
+        this.next=null;
+    }
+}
 
-// class stack{
-//     constructor(){
-//         this.next=null;
-//         this.top=null;
-//     }
+class stack{
+    constructor(){
+        this.next=null;
+        this.top=null;
+    }
 
-//     push(data){
-//         const newNode=new Node(data);
-//         if(this.top==null){
-//             this.top=newNode;
-//             return;
-//         }
-//         newNode.next=this.top;
-//         this.top=newNode;
-//     }
-//     pop(){
-//         if(this.top==null){
-//            console.log("Stack is empty");
-//             return;
-//         }
-//         let poped= this.top.data;
-//         this.top=this.top.next;
-//         return poped;
+    push(data){
+        const newNode=new Node(data);
+        if(this.top==null){
+            this.top=newNode;
+            return;
+        }
+        newNode.next=this.top;
+        this.top=newNode;
+    }
+    pop(){
+        if(this.top==null){
+           console.log("Stack is empty");
+            return;
+        }
+        let poped= this.top.data;
+        this.top=this.top.next;
+        return poped;
 
-//     }
-//     peek(){
-//         if(this.top==null){
-//             console.log("Stack is empty");
-//              return;
-//          }
-//          console.log("Peek element is",this.top.data);
-//     }
-//     display(){
-//         console.log("This is a Stack");
-//         let current=this.top;
-//         if(current==null){
-//             console.log("Stack is empty");
-//              return;
-//          }
-//          while(current!=null){
-//             console.log(current.data);
-//             current=current.next;
-//          }
-//     }
-// }
+    }
+    peek(){
+        if(this.top==null){
+            console.log("Stack is empty");
+             return;
+         }
+         console.log("Peek element is",this.top.data);
+    }
+    display(){
+        console.log("This is a Stack");
+        let current=this.top;
+        if(current==null){
+            console.log("Stack is empty");
+             return;
+         }
+         while(current!=null){
+            console.log(current.data);
+            current=current.next;
+         }
+    }
+}
 
-// const stk=new stack();
-// stk.push(11);
-// stk.push(12);
-// stk.push(13);
-// stk.push(14);
-// stk.push(15);
-// stk.display();
-// stk.peek();
-// stk.pop();
-// stk.display();
-// stk.peek();
+const stk=new stack();
+stk.push(11);
+stk.push(12);
+stk.push(13);
+stk.push(14);
+stk.push(15);
+stk.display();
+stk.peek();
+stk.pop();
+stk.display();
+stk.peek();
 
-// //Task 4
+//Task 4
 
-// let str="Tejas";
-// const stk2=new stack();
-// for (let i = 0; i < str.length; i++) {
-//     let char=str[i];
-//     stk2.push(char);
-// }
-// stk2.display();
-// let rev=[];
-// for (let i = 0; i < str.length; i++) {
-//     rev[i]=stk2.pop();
-// }
-// console.log(rev.join("").toString());}
+let str="Tejas";
+const stk2=new stack();
+for (let i = 0; i < str.length; i++) {
+    let char=str[i];
+    stk2.push(char);
+}
+stk2.display();
+let rev=[];
+for (let i = 0; i < str.length; i++) {
+    rev[i]=stk2.pop();
+}
+console.log(rev.join("").toString());}
 
 //task 5 ==> Queue
 class Node {
